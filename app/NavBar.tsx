@@ -3,10 +3,11 @@ import Link from "next/link";
 import { AiFillBug } from "react-icons/ai";
 
 const NavBar = () => {
+  const currentPath = usePathName()
   const links = [
     { label: "Dashboard", href: "/" },
-    { label: "Issues", href: "/" },
-  ]
+    { label: "Issues", href: "/issues" },
+  ];
 
   return (
     <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center ">
@@ -17,7 +18,7 @@ const NavBar = () => {
         {links.map((link) => (
           <Link
             key={link.href}
-            className="`${link.href === currrentPath ? 'text-zinc-900' : 'text-zinc-500'} hover:text-zinc-800 transition-colors`"
+            className=`${link.href === currrentPath ? 'text-zinc-900' : 'text-zinc-500'} hover:text-zinc-800 transition-colors`
             href={link.href}
           >
             {link.label}
