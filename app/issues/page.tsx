@@ -6,7 +6,7 @@ const IssuesPage = () => {
     const currentPath = usePathname()
   return (
     <div>
-      
+      Issues
     </div>
   )
 }
